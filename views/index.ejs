@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+   
+    <div class="w-full h-full bg-zinc-800 flex flex-col">
+        <div class="flex gap-5 mt-5 p-5 justify-center">
+        <div class="route">
+            <a href="/read" class="w-1/2 text-white bg-lime-500 rounded-lg w-1/2 ">Go to READ page</a>
+        </div>
+        <div class="route">
+            <a href="/login" class="text-white bg-lime-500 rounded-lg w-1/2">Go to Login page</a>
+        </div>
+        <div class="route">
+            <a href="/login" class="text-white bg-lime-500 rounded-lg w-1/2">Go to pag</a>
+        </div>
+    </div>
+        <h1 class="text-white text-2xl p-5"> create user</h1>
+        <hr>
+        <form class="flex flex-col gap-4 m-4" action="/create" method="post">
+            <input class="px-5 py-2 border-2 border-zinc-800 bg-slate-500 w-1/2 rounded-lg" name="name" placeholder="name" type="text">
+            <input class="px-5 py-2 border-2 border-zinc-800 bg-slate-500 w-1/2 rounded-lg" name="email"  placeholder="email" type="text">
+            <input class="px-5 py-2 border-2 border-zinc-800 bg-slate-500 w-1/2 rounded-lg" name="password" placeholder="password" type="text">
+            <input class="px-5 py-2 border-2 border-zinc-800 bg-slate-500 w-1/2 rounded-lg" name="age" placeholder="age" type="text">
+            <input class="bg-lime-500 w-1/4 rounded-lg" type="Submit" value="Create User">
+        </form>
+        
+    </div>
+
+    
+</body>
+</html>

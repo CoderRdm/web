@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Gigs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Header with Search Bar -->
+    <header class="flex items-center justify-between px-6 py-4 shadow-md bg-white">
+        <!-- Logo -->
+        <div class="flex items-center">
+            <a href="/home">
+                <img src="https://i.ibb.co/b139G9W/freelancer-outline-icon-monochrome-simple-sign-from-freelance-collection-freelancer-icon-for-logo-te.jpg" alt="Logo" class="h-8 w-auto cursor-pointer" />
+            </a>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="flex-1 mx-6">
+            <form action="/" method="GET">
+                <input
+                    type="text"
+                    name="search"
+                    placeholder="Search gigs..."
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+            </form>
+        </div>
+
+        <!-- Right Side - Orders and Profile -->
+        <div class="flex items-center space-x-4">
+            <!-- Orders Button -->
+            <a href="/profileclient">
+                <div class="flex items-center relative cursor-pointer">
+                    <button class="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition duration-200">
+                        orders
+                    </button>
+                    
+                </div>
+            </a>
+
+            <!-- Become a Seller Button -->
+            <a href="/seller">
+                <button class="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition duration-200">
+                    Become a Seller
+                </button>
+            </a>
+
+            <!-- Profile Button -->
+            <a href="/profileclient">
+                <button class="flex items-center px-3 py-2 text-gray-700 bg-gray-200 rounded-full focus:outline-none hover:bg-gray-300">
+                    <img src="https://i.ibb.co/LtJ9b6b/5700c04197ee9a4372a35ef16eb78f4e.jpg" alt="profile" class="w-8 h-8 rounded-full" />
+                </button>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+<!-- Main Content -->
+<div class="container mx-auto pt-24 px-4">
+    <!-- Categories Grid Section -->
+    <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-black mb-4">DIFFERENT FIELDS YOU CAN FIND FREELANCERS IN.....</h2>
+        
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Web Development Category -->
+        <div class="bg-slate-500 rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+            <!-- Card Header -->
+            <div class="p-6 bg-slate-600">
+                <h3 class="text-2xl font-bold text-white mb-2 tracking-tight">
+                    Web Development
+                </h3>
+            </div>
+
+            <!-- Card Body -->
+            <div class="p-6">
+                <!-- Domain List for Web Development -->
+                <ul class="text-gray-100 leading-relaxed space-y-2">
+                    <li>Frontend Development</li>
+                    <li>Backend Development</li>
+                    <li>Full-Stack Development</li>
+                    <li>WordPress Development</li>
+                    <li>E-commerce Websites</li>
+                    <li>Landing Pages</li>
+                </ul>
+            </div>
+            
+            <!-- Card Footer -->
+           
+        </div>
+
+        <!-- App Development Category -->
+        <div class="bg-slate-500 rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+            <!-- Card Header -->
+            <div class="p-6 bg-slate-600">
+                <h3 class="text-2xl font-bold text-white mb-2 tracking-tight">
+                    App Development
+                </h3>
+            </div>
+
+            <!-- Card Body -->
+            <div class="p-6">
+                <!-- Domain List for App Development -->
+                <ul class="text-gray-100 leading-relaxed space-y-2">
+                    <li>iOS App Development</li>
+                    <li>Android App Development</li>
+                    <li>React Native Development</li>
+                    <li>Flutter Development</li>
+                    <li>Mobile Game Development</li>
+                    <li>App UI/UX Design</li>
+                </ul>
+            </div>
+            
+            <!-- Card Footer -->
+           
+        </div>
+
+        <!-- Cloud Computing Category -->
+        <div class="bg-slate-500 rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+            <!-- Card Header -->
+            <div class="p-6 bg-slate-600">
+                <h3 class="text-2xl font-bold text-white mb-2 tracking-tight">
+                    Cloud Computing
+                </h3>
+            </div>
+
+            <!-- Card Body -->
+            <div class="p-6">
+                <!-- Domain List for Cloud Computing -->
+                <ul class="text-gray-100 leading-relaxed space-y-2">
+                    <li>AWS Cloud Services</li>
+                    <li>Azure Cloud Solutions</li>
+                    <li>Google Cloud Platform</li>
+                    <li>DevOps & CI/CD Pipelines</li>
+                    <li>Cloud Security & Compliance</li>
+                    <li>Cloud Migration & Integration</li>
+                </ul>
+            </div>
+
+            <!-- Card Footer -->
+            
+        </div>
+    </div>
+
+    <!-- Gigs Grid Section -->
+   <div >
+    <h2 class="text-3xl font-bold text-black mb-4">GIGS YOU CAN FIND HERE.....</h2>
+        
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <% gigs.forEach(function(gig) { %>
+            <div class="bg-slate-500 rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                <!-- Card Header -->
+                <div class="p-6 bg-slate-600">
+                    <h3 class="text-2xl font-bold text-white mb-2 tracking-tight">
+                        <%= gig.title %>
+                    </h3>
+                </div>
+                
+                <!-- Card Body -->
+                <div class="p-6">
+                    <!-- Gig Poster Image -->
+                    <div class="mb-4">
+                        <img src="https://i.ibb.co/grkrmQG/pexels-caio-56759.jpg" alt="<%= gig.title %> Poster" class="w-full h-64 object-cover rounded-md">
+                    </div>
+
+                    <!-- Price -->
+                    <div class="mb-4">
+                        <span class="text-lg font-semibold text-white bg-slate-700 px-3 py-1 rounded-full">
+                            $<%= gig.price %>
+                        </span>
+                    </div>
+                    
+                    <!-- Description -->
+                    <p class="text-gray-100 leading-relaxed">
+                        <%= gig.description %>
+                    </p>
+                </div>
+                
+                <!-- Card Footer -->
+                <div class="px-6 pb-6">
+                    <button class="w-full bg-white text-slate-800 py-2 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</div>
+
+    <!-- Empty State for Gigs -->
+    <% if (gigs.length === 0) { %>
+        <div class="text-center py-20">
+            <h3 class="text-white text-2xl font-semibold mb-4">No gigs available at the moment</h3>
+            <p class="text-gray-400">Check back later for new opportunities</p>
+        </div>
+    <% } %>
+</div>
+<div class="text-center mb-12 mt-24">
+    <h2 class="text-3xl font-bold text-white mb-4">Available Freelance Gigs</h2>
+    <p class="text-gray-400 mb-8">Find the latest gigs and projects in different domains</p>
+</div>
+<!-- Footer or other components (optional) -->
+<footer class="bg-zinc-900 p-4 text-center text-white">
+    <p>&copy; 2024 All rights reserved</p>
+</footer>
+</body>
+</html>
+
+
+</body>
+</html>

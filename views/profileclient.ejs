@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Profile</title>
+    <style>
+        /* General reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a; /* dark background */
+            color: #fff; /* light text color */
+            line-height: 1.6;
+        }
+
+        /* Container for the whole page */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header section */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        /* Profile section */
+        .profile-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: flex-start;
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: #2b2b2b;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .profile-info p {
+            font-size: 1.2rem;
+            color: #ddd;
+        }
+
+        .profile-info strong {
+            color: #fff;
+        }
+
+        /* Orders Section */
+        .orders-section {
+            margin-top: 40px;
+            background-color: #2b2b2b;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .orders-section h2 {
+            font-size: 1.8rem;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .order-card {
+            background-color: #3a3a3a;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .order-card p {
+            font-size: 1.2rem;
+            color: #ddd;
+        }
+
+        /* Styling for the link */
+        .link-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .link-container a {
+            color: #fff;
+            background-color: #333;
+            padding: 12px 25px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .link-container a:hover {
+            background-color: #555;
+        }
+
+        /* Responsive Design for smaller screens */
+        @media (max-width: 768px) {
+            .profile-info {
+                padding: 20px;
+                gap: 15px;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .order-card {
+                padding: 15px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Client Profile</h1>
+    </header>
+
+    <div class="container">]9999
+        <!-- Profile Section -->
+        <div class="profile-info">
+            <img src="https://i.ibb.co/FzpLb5J/Whats-App-Image-2024-07-16-at-10-45-39-PM.jpg" alt="Profile Picture" class="profile-picture w-10 h-10">
+            <p><strong>Name:</strong> <%= user.name %></p>
+            <p><strong>Email:</strong> <%= user.email %></p>
+            <p><strong>Age:</strong> <%= user.age %></p>
+        </div>
+
+        <!-- Orders Section -->
+        <div class="orders-section">
+            <h2>Order History</h2>
+
+            <!-- Display total number of orders -->
+            <p><strong>Total Orders: 1</strong></p>
+
+            
+        </div>
+
+        <!-- Link to Go to Home -->
+        <div class="link-container">
+            <a href="/readgig">Go to Home</a>
+        </div>
+    </div>
+</body>
+</html>

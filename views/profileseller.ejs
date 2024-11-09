@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- <div class="route">
+        <a href="/readgig" class="text-white bg-lime-500 rounded-lg">read a gig</a>
+    </div> -->
+    <!-- <h1>Seller Profile</h1>
+    
+    <p><strong>Name:</strong> <%= seller.name %></p>
+    <p><strong>Email:</strong> <%= seller.email %></p>
+    <p><strong>Bio:</strong> <%= seller.bio %></p>
+    <p><strong>Qualification:</strong> <%= seller.qualification %></p>
+    <p><strong>Skills:</strong> <%= seller.skills %></p>
+    <p><strong>Residence:</strong> <%= seller.residence %></p> -->
+
+
+    <!-- Navigation Bar -->
+    <div class="fixed top-0 right-0 p-4 z-10">
+        <div class="route">
+            <a href="/readgig" class="text-white bg-lime-500 px-4 py-2 rounded-lg hover:bg-lime-600 transition-colors">
+                Read a Gig
+            </a>
+        </div>
+    </div>
+
+  <div class="max-w-4xl mx-auto p-6">
+        <h1 class="text-3xl font-bold mb-8">Seller Profile</h1>
+
+        <!-- Profile Summary -->
+        <div class="mb-8 bg-white p-6 rounded-lg shadow">
+            <div class="grid grid-cols-1 gap-4">
+                <div>
+                    <h2 class="text-xl font-semibold mb-2">Name</h2>
+                    <p class="text-gray-700"><%= seller.name %></p>
+                </div>
+                
+                <div>
+                    <h2 class="text-xl font-semibold mb-2">Email</h2>
+                    <p class="text-gray-700"><%= seller.email %></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bio -->
+        <div class="mb-8 bg-white p-6 rounded-lg shadow">
+            <h3 class="text-xl font-semibold mb-2">Bio</h3>
+            <p class="text-gray-700"><%= seller.bio %></p>
+        </div>
+
+        <!-- Qualification -->
+        <div class="mb-8 bg-white p-6 rounded-lg shadow">
+            <h3 class="text-xl font-semibold mb-2">Qualification</h3>
+            <p class="text-gray-700"><%= seller.qualification %></p>
+        </div>
+
+        <!-- Skills -->
+        <div class="mb-8 bg-white p-6 rounded-lg shadow">
+            <h3 class="text-xl font-semibold mb-2">Skills</h3>
+            <% if (seller.skills) { %>
+                <% const skillsArray = seller.skills.split(',').map(skill => skill.trim()) %>
+                <ul class="list-disc pl-5">
+                    <% skillsArray.forEach(function(skill) { %>
+                        <li class="text-gray-700"><%= skill %></li>
+                    <% }); %>
+                </ul>
+            <% } else { %>
+                <p class="text-gray-500">No skills provided</p>
+            <% } %>
+        </div>
+
+        <!-- Residence -->
+        <div class="mb-8 bg-white p-6 rounded-lg shadow">
+            <h3 class="text-xl font-semibold mb-2">Residence</h3>
+            <p class="text-gray-700"><%= seller.residence %></p>
+        </div>
+
+        <!-- Upload Gig Button -->
+        <div>
+            <a href="/uploadgig" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 inline-block transition-colors">
+                Upload a Gig
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>

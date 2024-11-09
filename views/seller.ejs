@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="route">
+        <a href="/readgig" class="text-white bg-lime-500 rounded-lg">read a gig</a>
+    </div>
+    <!-- <form action="/createseller" method="post">
+        <input class="px-5 py-2 border-2 border-zinc-800 bg-slate-500 w-1/2 rounded-lg" name="name" placeholder="name" type="text">
+        <input class="px-5 py-2 border-2 border-zinc-800 bg-slate-500 w-1/2 rounded-lg" name="email"  placeholder="email" type="text">
+        <input class="px-5 py-2 border-2 border-zinc-800 bg-slate-500 w-1/2 rounded-lg" name="bio" placeholder="bio" type="text">
+        <input class="px-5 py-2 border-2 border-zinc-800 bg-slate-500 w-1/2 rounded-lg" name="qualification"  placeholder="qualification" type="text">
+        <input class="px-5 py-2 border-2 border-zinc-800 bg-slate-500 w-1/2 rounded-lg" name="skills" placeholder="skills" type="text">
+        <input class="px-5 py-2 border-2 border-zinc-800 bg-slate-500 w-1/2 rounded-lg" name="residence" placeholder="residence" type="text">
+         
+        <input class="bg-lime-500 w-1/4 rounded-lg" type="Submit" value="upload seller">
+    </form> -->
+
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Create Seller Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="max-w-4xl mx-auto p-6">
+        <h1 class="text-3xl font-bold mb-4">Create Seller Profile</h1>
+
+        <form action="/createseller" method="post" class="flex flex-col space-y-4">
+            <input 
+                class="px-5 py-2 border-2 border-zinc-800 bg-slate-500 w-1/2 rounded-lg text-white placeholder-gray-200" 
+                name="name" 
+                placeholder="name" 
+                type="text"
+                required
+            >
+            
+            <input 
+                class="px-5 py-2 border-2 border-zinc-800 bg-slate-500 w-1/2 rounded-lg text-white placeholder-gray-200" 
+                name="email" 
+                placeholder="email" 
+                type="email"
+                required
+            >
+            
+            <input 
+                class="px-5 py-2 border-2 border-zinc-800 bg-slate-500 w-1/2 rounded-lg text-white placeholder-gray-200" 
+                name="bio" 
+                placeholder="bio" 
+                type="text"
+                required
+            >
+            
+            <input 
+                class="px-5 py-2 border-2 border-zinc-800 bg-slate-500 w-1/2 rounded-lg text-white placeholder-gray-200" 
+                name="qualification" 
+                placeholder="qualification" 
+                type="text"
+                required
+            >
+            
+            <input 
+                class="px-5 py-2 border-2 border-zinc-800 bg-slate-500 w-1/2 rounded-lg text-white placeholder-gray-200" 
+                name="skills" 
+                placeholder="skills" 
+                type="text"
+                required
+            >
+            
+            <input 
+                class="px-5 py-2 border-2 border-zinc-800 bg-slate-500 w-1/2 rounded-lg text-white placeholder-gray-200" 
+                name="residence" 
+                placeholder="residence" 
+                type="text"
+                required
+            >
+            
+            <input 
+                class="bg-lime-500 w-1/4 rounded-lg px-5 py-2 text-white font-semibold hover:bg-lime-600 cursor-pointer" 
+                type="submit" 
+                value="Upload Seller"
+            >
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+   
+    <div class="w-full h-full bg-zinc-800 flex flex-col">
+        <div class="route">
+            <a href="/" class="text-white bg-lime-500 rounded-lg ">Go to Home page</a>
+        </div>
+        <h1 class="text-white text-2xl p-5"> Login  user</h1>
+        <hr>
+        <form class="flex flex-col gap-4 m-4" action="/login" method="post">
+          
+            <input class="px-5 py-2 border-2 border-zinc-800 bg-slate-500 w-1/2 rounded-lg" name="email"  placeholder="email" type="text">
+            <input class="px-5 py-2 border-2 border-zinc-800 bg-slate-500 w-1/2 rounded-lg" name="password" placeholder="password" type="text">
+            
+            <input class="bg-orange-500 w-1/4 rounded-lg hover:bg-pink-500 curser-pointer" type="Submit" value="Login User">
+        </form>
+    </div>
+</body>
+</html>

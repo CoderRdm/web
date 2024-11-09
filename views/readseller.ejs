@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Gigs</title>
+</head>
+<body>
+    <h1>Your Created Gigs</h1>
+
+    <% if (gigs.length > 0) { %>
+        <ul>
+            <% gigs.forEach(gig => { %>
+                <li>
+                    <h2><%= gig.title %></h2>
+                    <p><strong>Price:</strong> <%= gig.price %></p>
+                    <p><strong>Category:</strong> <%= gig.category %></p>
+                    <p><strong>Description:</strong> <%= gig.description %></p>
+                    <p><strong>Experience Required:</strong> <%= gig.workexperience %></p>
+                </li>
+            <% }) %>
+        </ul>
+    <% } else { %>
+        <p>No gigs found for this seller.</p>
+    <% } %>
+</body>
+</html>
